@@ -16,6 +16,7 @@
       color: #ffffff; /* Testo bianco */
       padding: 40px 20px;
       position: relative;
+      padding-bottom: 80px; /* Distanza dal footer */
     }
 
     /* Overlay semi-trasparente sopra l'immagine di sfondo */
@@ -71,10 +72,17 @@
       color: inherit;
     }
 
+    footer {
+      position: absolute;
+      bottom: 20px; /* Posizione in basso */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .back-home {
       display: block;
       width: fit-content;
-      margin: 60px auto 20px auto;
+      margin: 0 auto;
       padding: 12px 24px;
       background-color: #ffffff; /* Rettangolo bianco */
       color: #004080; /* Testo blu */
@@ -109,8 +117,10 @@
     </a>
   </div>
 
-  <!-- Pulsante Torna alla Home -->
-  <a href="index.html" class="back-home">Torna alla Home</a>
+  <!-- Pulsante Torna alla Home nel footer -->
+  <footer>
+    <a href="index.html" class="back-home">Torna alla Home</a>
+  </footer>
 
 </body>
 </html>
