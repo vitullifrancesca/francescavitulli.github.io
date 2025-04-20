@@ -1,144 +1,405 @@
-<!-- Aggiungi questo nel <head> del tuo index.html -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-  .section-idrocefalo {
-    background: linear-gradient(to bottom, #e0f4ff, #003366);
-    padding: 40px 20px;
-    overflow: hidden;
-  }
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dott.ssa Francesca Vitulli - Neurochirurgo Pediatrico</title>
+  <meta name="description" content="Francesca Vitulli, neurochirurgo pediatrico.">
+  <meta name="keywords" content="Francesca Vitulli, neurochirurgo pediatrico, disrafismi spinali, gravidanza, neurochirurgia bambini, tumori cerebrali infantili, idrocefalo, Napoli, Ospedale Santobono, plagiocefalia, craniostenosi, ventricolomegalia, fetale, spina bifida, chirurgia mini-invasiva">
+  <meta name="author" content="Francesca Vitulli">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      scroll-behavior: smooth;
+      text-align: center;
+      background: linear-gradient(to bottom, #001933, #80c6e4);
+      min-height: 100vh;
+    }
 
-  .box-fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-  }
+    header {
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-  .box-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 25, 50, 0.6);
+      z-index: 1;
+    }
 
-  .intro-box, .conclusion-box {
-    background-color: white;
-    border: 2px solid #a0d4ff;
-    border-radius: 10px;
-    padding: 30px;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
+    .header-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
-  .surgery-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 80%;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
 
-  .surgery-box {
-    flex: 1 1 250px;
-    max-width: 300px;
-    background-color: #ffffff;
-    border: 2px solid #d0eaff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
 
-  .surgery-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  }
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+    }
 
-  .surgery-box i {
-    font-size: 40px;
-    color: #007acc;
-    margin-bottom: 10px;
-  }
+    nav {
+      background: white;
+      position: sticky;
+      top: 0;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 100;
+    }
 
-  .surgery-box h3 {
-    color: #007acc;
-    margin-bottom: 10px;
-  }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+    }
 
-  .surgery-box p {
-    font-size: 16px;
-  }
+    nav a:hover {
+      color: #0077aa;
+    }
 
-  .intro-box h2,
-  .conclusion-box h3 {
-    text-align: center;
-    color: #004080;
-  }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-  .intro-box p,
-  .conclusion-box p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-</style>
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-<!-- Sezione Idrocefalo -->
-<section id="idrocefalo" class="section-idrocefalo">
-  <div class="intro-box box-fade">
-    <h2>Idrocefalo</h2>
-    <p>
-      L'idrocefalo è una condizione neurologica che si verifica quando c'è un accumulo anomalo di liquido cerebrospinale (LCR) nelle cavità del cervello, chiamate ventricoli. Questo liquido è fondamentale per il corretto funzionamento del sistema nervoso centrale, in quanto protegge il cervello dagli urti e lo nutre. Tuttavia, quando il suo flusso o il suo drenaggio è ostacolato, si può verificare un accumulo che aumenta la pressione all'interno del cranio, con effetti dannosi sul tessuto cerebrale.
-    </p>
-    <p>L'idrocefalo può essere congenito, ossia presente sin dalla nascita, o acquisito, sviluppandosi durante la vita a seguito di trauma cranico, infezioni, emorragie o altre patologie. Le cause comuni di idrocefalo congenito includono anomalie nel processo di sviluppo del cervello, come malformazioni dei ventricoli cerebrali o difetti nella circolazione del liquido cerebrospinale.
-    </p>
-    <p>L'idrocefalo acquisito può essere causato da:
-    </p>
-    <p>• Traumi cranici: Un trauma cranico grave può danneggiare i sistemi di drenaggio del liquido cerebrospinale.
-    </p>
-    <p>• Infezioni: Meningiti o encefaliti possono compromettere il normale flusso del LCR.
-    </p>
-    <p>• Emorragie intraventricolari: Sanguinamenti nei ventricoli cerebrali possono ostacolare il drenaggio del liquido.
-    </p>
-    <p>• Tumori cerebrali: I tumori possono bloccare le vie di flusso del liquido cerebrospinale, causando accumulo.
-    </p>
-  </div>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
 
-  <div class="surgery-boxes box-fade">
-    <div class="surgery-box">
-      <i class="fas fa-procedures"></i>
-      <h3>VP Shunt</h3>
-      <p>Il trattamento più comune per l'idrocefalo è l'inserimento di uno shunt ventricolo-peritoneale. Si tratta di un dispositivo che devìa il liquido cerebrospinale in eccesso dai ventricoli cerebrali verso una cavità del corpo, solitamente la cavità addominale (peritoneo), dove il liquido viene riassorbito. Lo shunt è composto da un tubo sottile collegato a una valvola che regola il flusso del liquido. Sebbene efficace, questo trattamento può richiedere interventi successivi, poiché lo shunt può ostruirsi o infettarsi nel tempo.</p>
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .modal-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    .modal-arrow:hover {
+      color: #ccc;
+    }
+
+    .modal-prev {
+      left: 20px;
+    }
+
+    .modal-next {
+      right: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .social-logo {
+      height: 70px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-logo:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="profilo1.jpg" alt="Dott.ssa Francesca Vitulli" class="profile-pic">
+    <div>
+      <h1>Dott.ssa Francesca Vitulli</h1>
+      <p>Specialista in Neurochirurgia Pediatrica</p>
     </div>
-
-    <div class="surgery-box">
-      <i class="fas fa-stethoscope"></i>
-      <h3>ETV</h3>
-      <p>In alcuni casi, l'endoscopia ventricolare (ETV) è un'opzione. In questo trattamento, il neurochirurgo crea un'apertura nei ventricoli cerebrali per consentire al liquido di fluire liberamente, bypassando l'ostacolo che blocca il normale drenaggio. L'endoscopia ventricolare è una procedura minimamente invasiva che non richiede l'inserimento di un dispositivo permanente come lo shunt, e offre un'alternativa per i bambini con determinate tipologie di idrocefalo.</p>
-    </div>
-
   </div>
+</header>
 
-  <div class="conclusion-box box-fade">
-    <h3>Conclusioni</h3>
-    <p>
-      L'idrocefalo è una condizione grave che richiede un trattamento tempestivo per prevenire danni cerebrali permanenti. Grazie ai progressi della neurochirurgia pediatrica, oggi esistono diverse opzioni terapeutiche efficaci per gestire l'idrocefalo e migliorare la qualità della vita dei bambini affetti. Tuttavia, è essenziale che i genitori e gli operatori sanitari siano consapevoli dei sintomi e delle opzioni di trattamento per garantire una diagnosi precoce e un intervento adeguato.
+<nav>
+  <a href="#biografia">Biografia</a>
+  <a href="#corsi">Corsi e Congressi</a>
+  <a href="#pubblicazioni">Pubblicazioni</a>
+  <a href="patologie.html">Patologie</a>
+  <a href="#arte">L'arte dei miei Piccoli</a>
+  <a href="#galleria">Galleria</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<section id="biografia">
+  <h2>Biografia</h2>
+  <p>I miei studi in Medicina sono iniziati nell'anno 2012 presso l'Università “Federico II” di Napoli, Italia, dove ho conseguito la Laurea Magistrale in Medicina e Chirurgia con il massimo dei voti nel 2018. 
+</p>
+ <p>
+Durante questi anni, ho arricchito la mia formazione attraverso periodi di studio all'estero. 
+</p>
+ <p>
+Nel 2015, nell'ambito del progetto universitario Erasmus presso “Universitätsklinikum des Saarlandes” in Germania, ho partecipato attivamente alla loro attività clinica e chirurgica, acquisendo esperienza sulle loro strategie organizzative e la loro gestione clinica. 
+</p>
+ <p>
+Nel 2018, nell’ambito del programma IFMSA - International Federation of Medical Students Associations -  presso la “Faculdade de Ciências da Saúde de Barretos Dr. Paulo Prata” a San Paolo, in Brasile, ho svolto un periodo di attività di laboratorio di ricerca applicata. 
+</p>
+ <p>
+Queste esperienze hanno influenzato profondamente il mio approccio alla medicina, permettendomi di riconoscere l’importanza e la necessità di una profonda collaborazione internazionale ed interdisciplinare con il fine ultimo di garantire i migliori trattamenti medici e le migliori attenzioni alle esigenze di ogni paziente. 
+   </p>
+ <p> 
+Inoltre, l’esperienza di ricerca di laboratorio in Brasile, mi ha spinta a voler integrare le mie conoscenze mediche con lo studio delle nuove frontiere nei trattamenti farmacologici. A tal fine, dopo aver concluso il corso di Laurea Magistrale in Medicina e Chirurgia, ho intrapreso gli studi in Biotecnologie Mediche e Farmaceutiche conseguendo la seconda Laurea Specialistica nel 2019.
     </p>
-    <p>La scelta del trattamento per l'idrocefalo dipende da diversi fattori: età del paziente, causa dell’ostruzione, anatomia ventricolare e risorse disponibili. L'approccio personalizzato è fondamentale per ottenere i migliori risultati clinici.</p>
-    <p>Se sospetti che tuo figlio possa essere affetto da idrocefalo, è fondamentale consultare un neurochirurgo pediatrico per una valutazione approfondita e un piano di trattamento personalizzato.</p>
+ <p>
+Nello stesso anno, ho iniziato la specializzazione medica chirurgica in Neurochirurgia, presso l’Università “Federico II” di Napoli, dove ho conseguito il titolo di Neurochirurgo nel 2024. 
+ </p>
+ <p>
+Durante il periodo di specializzazione, ho completato una fellowship in “Neuroendoscopia pediatrica, adulta e fetale” presso il “King’s College Hospital” di Londra, con particolare interesse per il trattamento chirurgico durante la gravidanza dei disrafismi spinali (spina bifida) nel 2023 ed una fellowship di ricerca sulle “Tecniche chirurgiche mininvasive in neurochirurgia” presso “Universitätsklinikum des Saarlandes”, in Germania nel 2024. Ho inoltre approfondito la mia formazione specialistica presso l’Ospedale “Santobono - A.O.R.N. Santobono-Pausilipon” di Napoli, “AORN Antonio Cardarelli” di Napoli e “Neuromed – Istituto Neurologico Mediterraneo Pozzilli” di Venafro.
+ </p>
+ <p>
+Nel 2023-2024 ho lavorato presso l'Ospedale Gaslini di Genova, come neurochirurgo pediatrico, un'esperienza che mi ha arricchito dal punto di vista professionale e umano, rafforzando il mio amore e la mia passione per la neurochirurgia pediatrica.
+</p>
+ <p>
+Attualmente, sono onorata di far parte del team d’eccellenza della neurochirurgia pediatrica dell’Ospedale “Santobono – A.O.R.N. Santobono-Pausilipon” di Napoli, dove mi impegno per offrire ai nostri piccoli pazienti le migliori soluzioni terapeutiche.
+  </p>
+ <p>  
+Oltre all’impegno clinico, sono attivamente coinvolta nella fondazione SAWUBONA, che promuove missioni sanitarie in Africa presso il “Coast General Teaching & Referral Hospital” di Mombasa,  in Kenya. Questa esperienza, che mi permette di contribuire attivamente al miglioramento dei trattamenti medici e chirurgici in paesi meno fortunati, ha arricchito la mia visione globale della medicina. 
+</p>
+
+</section>
+
+<section id="pubblicazioni">
+  <h2>Pubblicazioni</h2>
+  <p>Le pubblicazioni scientifiche riflettono l'impegno continuo nella ricerca e nell'approfondimento delle problematiche neurochirurgiche pediatriche. La collaborazione con esperti internazionali per sviluppare e condividere conoscenze, contribuisce al progresso delle pratiche cliniche e terapeutiche, migliorando le cure per i nostri piccoli pazienti.
+  </p>
+  <div class="social-links">
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=francesca+vitulli&sort=date&size=100" target="_blank" rel="noopener noreferrer">
+      <img src="pubmed.jpg" alt="PubMed" class="social-logo">
+    </a>
+    <a href="https://www.researchgate.net/profile/Francesca-Vitulli-2" target="_blank" rel="noopener noreferrer">
+      <img src="research.jpg" alt="ResearchGate" class="social-logo">
+    </a>
   </div>
 </section>
 
-<!-- Script per animazione al scroll -->
+<section id="corsi">
+  <h2>Corsi e Congressi</h2>
+  <p>La partecipazione costante a corsi di aggiornamento e congressi scientifici, nazionali ed internazionali, rappresenta per me una necessità. 
+    </p>
+  <p>La Neurochirurgia è una disciplina in continua e veloce evoluzione, dove le conoscenze teoriche vengono adattate e perfezionate ogni giorno in sala operatoria, aumentando l'esperienza del singolo chirurgo. 
+    Solo dalla condivisione di queste esperienze ai congressi, è possibile accrescere la conoscenza collettiva.</p>
+  </p>
+  <div class="gallery">
+    <img src="corso01.jpg" alt="ESPN" onclick="openModal(this)">
+    <img src="corso2.jpg" alt="Corso 2" onclick="openModal(this)">
+    <img src="corso3.jpg" alt="Corso 3" onclick="openModal(this)">
+    <img src="corso4.jpg" alt="Corso 4" onclick="openModal(this)">
+    <img src="corso5.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso6.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso7.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso8.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso9.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso10.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso11.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso12.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso13.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso14.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso15.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso16.jpg" alt="Corso 5" onclick="openModal(this)">
+      <img src="corso18.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso19.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso20.jpg" alt="Corso 5" onclick="openModal(this)">
+     <img src="corso21.jpg" alt="Corso 5" onclick="openModal(this)">
+  </div>
+</section>
+
+<section id="arte">
+  <h2>L'arte dei miei Piccoli</h2>
+  <p>I riconoscimenti d'affetto più importanti: le opere d'arte create dai miei pazienti.</p>
+  <div class="gallery">
+    <img src="arte1.jpg" alt="Disegno 1" onclick="openModal(this)">
+    <img src="arte2.jpg" alt="Disegno 2" onclick="openModal(this)">
+    <img src="arte3.jpg" alt="Disegno 3" onclick="openModal(this)">
+    <img src="arte4.jpg" alt="Disegno 4" onclick="openModal(this)">
+  </div>
+</section>
+
+  <section id="galleria">
+  <h2>Galleria</h2>
+  <p></p>
+  <div class="gallery">
+    <img src="galleria1.jpeg" alt="Disegno 1" onclick="openModal(this)">
+    <img src="galleria2.jpg" alt="Disegno 2" onclick="openModal(this)">
+    <img src="galleria5.jpeg" alt="Disegno 3" onclick="openModal(this)">
+    <img src="galleria6.jpg" alt="Disegno 4" onclick="openModal(this)">
+     <img src="galleria8.JPG" alt="Disegno 4" onclick="openModal(this)">
+    <img src="galleria9.jpg" alt="Disegno 1" onclick="openModal(this)">
+    <img src="galleria10.jpg" alt="Disegno 2" onclick="openModal(this)">
+    <img src="galleria11.jpeg" alt="Disegno 3" onclick="openModal(this)">
+    <img src="galleria12.jpeg" alt="Disegno 4" onclick="openModal(this)">
+     <img src="galleria13.jpg" alt="Disegno 4" onclick="openModal(this)">
+    <img src="galleria14.jpg" alt="Disegno 1" onclick="openModal(this)">
+    <img src="galleria16.jpg" alt="Disegno 2" onclick="openModal(this)">
+    <img src="galleria4.jpg" alt="Disegno 3" onclick="openModal(this)">
+    <img src="galleria3.jpg" alt="Disegno 4" onclick="openModal(this)">
+     <img src="galleria15.JPG" alt="Disegno 4" onclick="openModal(this)">
+    <img src="galleria7.jpg" alt="Disegno 4" onclick="openModal(this)">
+  </div>
+</section>
+
+<section id="contatti">
+  <h2>Contatti</h2>
+  <p>Email: <a href="mailto:f.vitulli@santobonopausilipon.it">f.vitulli@santobonopausilipon.it</a><br>
+     Tel: +39 333 700 9837<br>
+     Sede: Ospedale Santobono - A.O.R.N. Santobono-Pausilipon, Napoli</p>
+</section>
+
+<footer>
+  &copy; 2025 Francesca Vitulli. Tutti i diritti riservati.
+</footer>
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">×</span>
+  <span class="modal-arrow modal-prev" onclick="changeImage(-1)">❮</span>
+  <img class="modal-content" id="modalImg">
+  <span class="modal-arrow modal-next" onclick="changeImage(1)">❯</span>
+</div>
+
 <script>
-  const fadeBoxes = document.querySelectorAll('.box-fade');
+  let currentIndex = 0;
+  let images = [];
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.2
+  function openModal(imgElement) {
+    images = Array.from(document.querySelectorAll('.gallery img'));
+    currentIndex = images.indexOf(imgElement);
+    updateModalImage();
+    document.getElementById("imgModal").style.display = "flex";
+  }
+
+  function updateModalImage() {
+    const modalImg = document.getElementById("modalImg");
+    if (images[currentIndex]) {
+      modalImg.src = images[currentIndex].src;
+    }
+  }
+
+  function changeImage(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    updateModalImage();
+  }
+
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+
+  document.addEventListener("keydown", function(event) {
+    const modal = document.getElementById("imgModal");
+    if (modal.style.display === "flex") {
+      if (event.key === "ArrowRight") changeImage(1);
+      if (event.key === "ArrowLeft") changeImage(-1);
+      if (event.key === "Escape") closeModal();
+    }
   });
-
-  fadeBoxes.forEach(box => observer.observe(box));
 </script>
+
+</body>
+</html>
