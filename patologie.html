@@ -6,7 +6,9 @@
   <title>Patologie - Dott.ssa Francesca Vitulli</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* Impostazioni globali */
+    html, body {
+      height: 100%; /* Occupare tutta l'altezza della finestra */
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: url('orsetto.jpeg'); /* Aggiungi lo sfondo dell'orsetto */
@@ -15,8 +17,8 @@
       background-attachment: fixed;
       color: #ffffff; /* Testo bianco */
       padding: 40px 20px;
-      position: relative;
-      padding-bottom: 80px; /* Distanza dal footer */
+      display: flex;
+      flex-direction: column;
     }
 
     /* Overlay semi-trasparente sopra l'immagine di sfondo */
@@ -44,6 +46,7 @@
       gap: 30px;
       max-width: 1000px;
       margin: auto;
+      flex-grow: 1; /* Fa crescere la griglia per occupare lo spazio disponibile */
     }
 
     .card {
@@ -73,26 +76,20 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 20px; /* Posizione in basso */
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .back-home {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
+      margin-top: 20px;
       padding: 12px 24px;
       background-color: #ffffff; /* Rettangolo bianco */
       color: #004080; /* Testo blu */
       font-weight: bold;
       border-radius: 8px;
       border: 2px solid #ffffff;
+      text-align: center;
+      width: fit-content;
+      margin: 0 auto; /* Centra il pulsante */
       transition: background-color 0.3s, color 0.3s;
     }
 
-    .back-home:hover {
+    footer:hover {
       background-color: #004080;
       color: #ffffff;
     }
