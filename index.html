@@ -25,6 +25,23 @@
       color: white;
       text-align: center;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      padding: 20px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
     header h1 {
@@ -92,8 +109,13 @@
 <body>
 
 <header>
-  <h1>Francesca Vitulli</h1>
-  <p>Neurochirurgo | Specialista in Chirurgia Endoscopica e Pediatrica</p>
+  <div class="header-content">
+    <img src="profilo.jpg" alt="Francesca Vitulli" class="profile-pic">
+    <div>
+      <h1>Francesca Vitulli</h1>
+      <p>Neurochirurgo | Specialista in Chirurgia Endoscopica e Pediatrica</p>
+    </div>
+  </div>
 </header>
 
 <nav>
