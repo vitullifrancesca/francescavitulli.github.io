@@ -5,17 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Patologie - Dott.ssa Francesca Vitulli</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
- 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('orsetto.jpeg'); /* Aggiungi lo sfondo dell'orsetto */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff; /* Testo bianco */
+      padding: 40px 20px;
+      position: relative;
+    }
 
-    <style>
-  .section-idrocefalo {
-    background: url('orsetto.jpeg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6;
-    padding: 40px 20px;
-    overflow: hidden;
-  }
+    /* Overlay semi-trasparente sopra l'immagine di sfondo */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Overlay nero con trasparenza */
+      z-index: -1; /* Mette l'overlay dietro al contenuto */
+    }
 
     h1 {
       text-align: center;
@@ -26,7 +39,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, 1fr); /* Disporre i box a due a due */
       gap: 30px;
       max-width: 1000px;
       margin: auto;
@@ -38,6 +51,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       overflow: hidden;
       text-align: center;
+      padding: 20px 0;
       transition: transform 0.2s ease;
       border: 1px solid #e0eaff;
     }
@@ -46,16 +60,9 @@
       transform: scale(1.03);
     }
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
     .card-title {
-      padding: 15px;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.5em;
       color: #004080;
     }
 
@@ -89,19 +96,15 @@
 
   <div class="grid">
     <a href="idrocefalo.html" class="card">
-      <img src="idrocefalo.jpg" alt="Idrocefalo">
       <div class="card-title">Idrocefalo</div>
     </a>
     <a href="spina-bifida.html" class="card">
-      <img src="spina-bifida.jpg" alt="Spina Bifida">
       <div class="card-title">Spina Bifida</div>
     </a>
     <a href="tumori-cerebrali.html" class="card">
-      <img src="tumori.jpg" alt="Tumori Cerebrali Pediatrici">
       <div class="card-title">Tumori Cerebrali</div>
     </a>
     <a href="craniosinostosi.html" class="card">
-      <img src="craniosinostosi.jpg" alt="Craniosinostosi">
       <div class="card-title">Craniosinostosi</div>
     </a>
   </div>
