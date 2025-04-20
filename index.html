@@ -177,12 +177,32 @@
       right: 20px;
     }
 
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .social-logo {
+      height: 150px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-logo:hover {
+      transform: scale(1.05);
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
       }
       nav a {
         margin: 0 10px;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -212,7 +232,6 @@
   <p>Sono una neurochirurga con formazione in Italia e esperienza internazionale, specializzata in tecniche mini-invasive e chirurgia neuro-oncologica pediatrica. Credo in un approccio umano e multidisciplinare alla cura del paziente.</p>
 </section>
 
-
 <section id="pubblicazioni">
   <h2>Pubblicazioni</h2>
   <p>Mi occupo del trattamento chirurgico delle patologie del sistema nervoso centrale, tra cui tumori cerebrali, idrocefalo, cisti colloidi e altre condizioni neurochirurgiche complesse. Utilizzo tecniche endoscopiche, microchirurgiche e tecnologie avanzate di neuronavigazione e monitoraggio intraoperatorio.</p>
@@ -225,7 +244,7 @@
     </a>
   </div>
 </section>
-  
+
 <section id="corsi">
   <h2>Corsi e Congressi</h2>
   <p>La formazione continua è fondamentale per offrire il meglio ai miei pazienti. Ecco alcuni momenti salienti di congressi e corsi.</p>
