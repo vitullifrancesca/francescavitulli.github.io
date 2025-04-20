@@ -7,7 +7,6 @@
   <meta name="description" content="Francesca Vitulli, neurochirurgo pediatrico con esperienza internazionale. Specialista in tecniche mini-invasive e chirurgia neuro-oncologica a Napoli.">
   <meta name="keywords" content="Francesca Vitulli, neurochirurgo pediatrico, neurochirurgia bambini, tumori cerebrali infantili, idrocefalo, Napoli, Ospedale Santobono, plagiocefalia, craniostenosi, ventricolomegalia, fetale, spina bifida, chirurgia mini-invasiva">
   <meta name="author" content="Francesca Vitulli">
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -21,15 +20,11 @@
     }
 
     header {
-      background-size: cover;
-      background-position: center;
       height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
-      text-align: center;
       position: relative;
     }
 
@@ -47,8 +42,8 @@
       position: relative;
       z-index: 2;
       display: flex;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       gap: 20px;
     }
 
@@ -115,8 +110,8 @@
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      cursor: pointer;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .gallery img:hover {
@@ -131,50 +126,64 @@
       color: #666;
     }
 
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .modal-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    .modal-arrow:hover {
+      color: #ccc;
+    }
+
+    .modal-prev {
+      left: 20px;
+    }
+
+    .modal-next {
+      right: 20px;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
       }
       nav a {
         margin: 0 10px;
-        display: inline-block;
       }
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.9);
-    }
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .modal-close:hover {
-      color: #ccc;
     }
   </style>
 </head>
@@ -206,18 +215,15 @@
 <section id="pubblicazioni">
   <h2>Pubblicazioni</h2>
   <p>Mi occupo del trattamento chirurgico delle patologie del sistema nervoso centrale, tra cui tumori cerebrali, idrocefalo, cisti colloidi, e altre condizioni neurochirurgiche complesse. Utilizzo tecniche endoscopiche, microchirurgiche e tecnologie avanzate di neuronavigazione e monitoraggio intraoperatorio.</p>
-
-  <p>Consulta le mie pubblicazioni scientifiche su:</p>
-  <ul style="list-style: none; padding-left: 0; font-size: 1.1em;">
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=francesca+vitulli&sort=date&size=100" target="_blank" style="color: #ffe;">🔬 PubMed</a></li>
-    <li><a href="https://www.researchgate.net/profile/Francesca-Vitulli-2" target="_blank" style="color: #ffe;">📘 ResearchGate</a></li>
-  </ul>
+  <p>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=francesca+vitulli&sort=date&size=100" target="_blank">PubMed</a> | 
+    <a href="https://www.researchgate.net/profile/Francesca-Vitulli-2" target="_blank">ResearchGate</a>
+  </p>
 </section>
 
 <section id="corsi">
   <h2>Corsi e Congressi</h2>
   <p>La formazione continua è fondamentale per offrire il meglio ai miei pazienti. Ecco alcuni momenti salienti di congressi e corsi.</p>
-  
   <div class="gallery">
     <img src="corso01.jpg" alt="ESPN" onclick="openModal(this)">
     <img src="corso2.jpg" alt="Corso 2" onclick="openModal(this)">
@@ -229,7 +235,6 @@
 <section id="arte">
   <h2>L'arte dei miei Piccoli</h2>
   <p>I riconoscimenti d'affetto più importanti: le opere d'arte create dai miei pazienti.</p>
-  
   <div class="gallery">
     <img src="arte1.jpg" alt="Disegno 1" onclick="openModal(this)">
     <img src="arte2.jpg" alt="Disegno 2" onclick="openModal(this)">
@@ -250,22 +255,48 @@
 </footer>
 
 <!-- MODAL -->
-<div id="imgModal" class="modal" onclick="closeModal()">
+<div id="imgModal" class="modal">
   <span class="modal-close" onclick="closeModal()">×</span>
+  <span class="modal-arrow modal-prev" onclick="changeImage(-1)">❮</span>
   <img class="modal-content" id="modalImg">
+  <span class="modal-arrow modal-next" onclick="changeImage(1)">❯</span>
 </div>
 
 <script>
+  let currentIndex = 0;
+  let images = [];
+
   function openModal(imgElement) {
-    var modal = document.getElementById("imgModal");
-    var modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = imgElement.src;
+    images = Array.from(document.querySelectorAll('.gallery img'));
+    currentIndex = images.indexOf(imgElement);
+    updateModalImage();
+    document.getElementById("imgModal").style.display = "flex";
+  }
+
+  function updateModalImage() {
+    const modalImg = document.getElementById("modalImg");
+    if (images[currentIndex]) {
+      modalImg.src = images[currentIndex].src;
+    }
+  }
+
+  function changeImage(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    updateModalImage();
   }
 
   function closeModal() {
     document.getElementById("imgModal").style.display = "none";
   }
+
+  document.addEventListener("keydown", function(event) {
+    const modal = document.getElementById("imgModal");
+    if (modal.style.display === "flex") {
+      if (event.key === "ArrowRight") changeImage(1);
+      if (event.key === "ArrowLeft") changeImage(-1);
+      if (event.key === "Escape") closeModal();
+    }
+  });
 </script>
 
 </body>
