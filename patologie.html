@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Patologie pediatriche - Dott.ssa Francesca Vitulli</title>
+  <title>Patologie - Dott.ssa Francesca Vitulli</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -11,37 +11,76 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #f9f9f9;
       color: #333;
-      text-align: center;
       padding: 40px 20px;
     }
 
     h1 {
+      text-align: center;
       font-size: 2.5em;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
-    .content {
-      max-width: 800px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
       margin: auto;
-      text-align: left;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
 <body>
 
   <h1>Patologie Trattate</h1>
-  <div class="content">
-    <p>In questa sezione trovi informazioni su alcune delle principali patologie trattate in ambito di neurochirurgia pediatrica:</p>
-    <ul>
-      <li>Disrafismi spinali e spina bifida</li>
-      <li>Idrocefalo e malformazioni del sistema ventricolare</li>
-      <li>Tumori cerebrali pediatrici</li>
-      <li>Plagiocefalia e craniostenosi</li>
-      <li>Chirurgia fetale</li>
-      <li>Malformazioni vascolari</li>
-      <!-- Puoi aggiungere altre -->
-    </ul>
-    <p>Per ciascuna patologia sarà presto disponibile una scheda dettagliata.</p>
+
+  <div class="grid">
+    <a href="idrocefalo.html" class="card">
+      <img src="idrocefalo.jpg" alt="Idrocefalo">
+      <div class="card-title">Idrocefalo</div>
+    </a>
+    <a href="spina-bifida.html" class="card">
+      <img src="spina-bifida.jpg" alt="Spina Bifida">
+      <div class="card-title">Spina Bifida</div>
+    </a>
+    <a href="tumori-cerebrali.html" class="card">
+      <img src="tumori.jpg" alt="Tumori Cerebrali Pediatrici">
+      <div class="card-title">Tumori Cerebrali</div>
+    </a>
+    <a href="craniosinostosi.html" class="card">
+      <img src="craniosinostosi.jpg" alt="Craniosinostosi">
+      <div class="card-title">Craniosinostosi</div>
+    </a>
+    <!-- Aggiungi altre patologie qui -->
   </div>
 
 </body>
