@@ -14,21 +14,41 @@
     }
 
     header {
+      position: relative;
+      height: 70vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background-image: url('https://source.unsplash.com/1600x600/?hospital,neurosurgery');
       background-size: cover;
       background-position: center;
-      height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
-      padding: 20px;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 64, 0.5); /* blu navy trasparente */
+      z-index: 2;
     }
 
     .header-content {
+      position: relative;
+      z-index: 3;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -79,10 +99,10 @@
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      text-align: center; /* centra i testi descrittivi */
     }
 
     section h2 {
-      text-align: center;
       font-size: 2em;
       margin-bottom: 20px;
     }
@@ -136,16 +156,16 @@
   <p>Mi occupo del trattamento chirurgico delle patologie del sistema nervoso centrale, tra cui tumori cerebrali, idrocefalo, cisti colloidi, e altre condizioni neurochirurgiche complesse. Utilizzo tecniche endoscopiche, microchirurgiche e tecnologie avanzate di neuronavigazione e monitoraggio intraoperatorio.</p>
 </section>
 
-  <section id="corsi">
+<section id="corsi">
   <h2>Corsi e Congressi</h2>
   <p>.</p>
 </section>
 
-  <section id="arte">
+<section id="arte">
   <h2>L'arte dei miei Piccoli</h2>
   <p>I riconoscimenti d'affetto più importanti: le opere d'arte create dai miei pazienti.</p>
 </section>
-  
+
 <section id="contatti">
   <h2>Contatti</h2>
   <p>Email: <a href="mailto:f.vitulli@santobonopausilipon.it">f.vitulli@santobonopausilipon.it</a><br>
