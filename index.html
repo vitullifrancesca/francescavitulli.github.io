@@ -11,44 +11,36 @@
       font-family: 'Montserrat', sans-serif;
       color: #333;
       scroll-behavior: smooth;
+      text-align: center;
     }
 
     header {
-      position: relative;
+      background-image: url('https://source.unsplash.com/1600x600/?hospital,neurosurgery');
+      background-size: cover;
+      background-position: center;
       height: 70vh;
-      color: white;
-      text-align: center;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
-      padding: 20px;
-      overflow: hidden;
+      color: white;
+      text-align: center;
+      position: relative;
     }
 
     header::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-image: url('https://source.unsplash.com/1600x600/?hospital,neurosurgery');
-      background-size: cover;
-      background-position: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 25, 50, 0.6); /* navy trasparente */
       z-index: 1;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 64, 0.5); /* blu navy trasparente */
-      z-index: 2;
     }
 
     .header-content {
       position: relative;
-      z-index: 3;
+      z-index: 2;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -97,14 +89,32 @@
 
     section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      text-align: center; /* centra i testi descrittivi */
     }
 
     section h2 {
       font-size: 2em;
       margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
 
     footer {
@@ -158,12 +168,26 @@
 
 <section id="corsi">
   <h2>Corsi e Congressi</h2>
-  <p>.</p>
+  <p>La formazione continua è fondamentale per offrire il meglio ai miei pazienti. Ecco alcuni momenti salienti di congressi e corsi.</p>
+  
+  <div class="gallery">
+    <img src="img/corso1.jpg" alt="Corso 1">
+    <img src="img/corso2.jpg" alt="Corso 2">
+    <img src="img/corso3.jpg" alt="Corso 3">
+    <img src="img/corso4.jpg" alt="Corso 4">
+  </div>
 </section>
 
 <section id="arte">
   <h2>L'arte dei miei Piccoli</h2>
   <p>I riconoscimenti d'affetto più importanti: le opere d'arte create dai miei pazienti.</p>
+  
+  <div class="gallery">
+    <img src="img/arte1.jpg" alt="Disegno 1 dei piccoli pazienti">
+    <img src="img/arte2.jpg" alt="Disegno 2 dei piccoli pazienti">
+    <img src="img/arte3.jpg" alt="Disegno 3 dei piccoli pazienti">
+    <img src="img/arte4.jpg" alt="Disegno 4 dei piccoli pazienti">
+  </div>
 </section>
 
 <section id="contatti">
