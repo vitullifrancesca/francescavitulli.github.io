@@ -1,1 +1,173 @@
+<style>
+  .section-tumori-cerebrali {
+    background: url('tumori_cerebrali.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    padding: 40px 20px;
+    overflow: hidden;
+  }
+
+  .box-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+  }
+
+  .box-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .intro-box, .conclusion-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #a0d4ff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .conclusion-box {
+    margin-top: 60px;
+  }
+
+  .surgery-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .surgery-box {
+    flex: 1 1 250px;
+    max-width: 430px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d0eaff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .surgery-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .surgery-box h3 {
+    color: #007acc;
+    margin-bottom: 10px;
+  }
+
+  .surgery-box p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .intro-box h2,
+  .conclusion-box h3 {
+    text-align: center;
+    color: #004080;
+  }
+
+  .intro-box p,
+  .conclusion-box p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .return-home {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .return-home-button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .return-home-button:hover {
+    background-color: #005f8d;
+  }
+
+  .return-home-button i {
+    margin-right: 10px;
+  }
+</style>
+
+<!-- Sezione Tumori Cerebrali -->
+<section id="tumori-cerebrali" class="section-tumori-cerebrali">
+  <div class="intro-box box-fade">
+    <h2>Tumori Cerebrali</h2>
+    <p>
+      I tumori cerebrali sono masse di tessuti anomali che si formano nel cervello. Possono essere benigni o maligni, e la loro natura dipende dalla rapidità della crescita e dalla capacità di invadere i tessuti circostanti. I tumori cerebrali possono colpire qualsiasi parte del cervello, e i sintomi variano a seconda della loro posizione e dimensione. I tumori cerebrali primari si originano nel cervello stesso, mentre i tumori secondari (metastatici) si diffondono da altre parti del corpo.
+    </p>
+    <p>I tumori cerebrali più comuni includono:</p>
+    <ul>
+      <li><strong>Glioblastoma</strong>: un tumore maligno che cresce rapidamente e che è difficile da trattare.</li>
+      <li><strong>Adenoma pituitario</strong>: un tumore benigno che si forma nella ghiandola pituitaria e può influenzare la produzione di ormoni.</li>
+      <li><strong>Astrocitoma</strong>: un tumore che origina dalle cellule gliali chiamate astrociti. Può essere benigno o maligno.</li>
+      <li><strong>Meningioma</strong>: un tumore benigno che si sviluppa nelle meningi, le membrane che rivestono il cervello e il midollo spinale.</li>
+    </ul>
+    <p>Il trattamento per i tumori cerebrali dipende dal tipo di tumore, dalla sua posizione, dalle sue dimensioni e dallo stato di salute generale del paziente.</p>
+  </div>
+
+  <div class="surgery-boxes box-fade">
+    <div class="surgery-box">
+      <h3>Chirurgia</h3>
+      <p>La chirurgia è uno dei principali trattamenti per i tumori cerebrali, in particolare quando il tumore è localizzato e accessibile. L'intervento chirurgico mira a rimuovere il tumore, ridurre la pressione intracranica e migliorare i sintomi. Tuttavia, non tutti i tumori cerebrali sono operabili a causa della loro posizione o delle condizioni generali del paziente.</p>
+    </div>
+
+    <div class="surgery-box">
+      <h3>Radioterapia</h3>
+      <p>La radioterapia utilizza radiazioni ad alta energia per distruggere le cellule tumorali. Viene spesso utilizzata per trattare i tumori cerebrali dopo l'intervento chirurgico, o quando il tumore non può essere rimosso completamente. È anche utile per trattare tumori metastatici provenienti da altre aree del corpo.</p>
+    </div>
+
+    <div class="surgery-box">
+      <h3>Chemioterapia</h3>
+      <p>La chemioterapia è il trattamento con farmaci che mirano a distruggere le cellule tumorali. Viene utilizzata in combinazione con la chirurgia e la radioterapia per trattare tumori cerebrali maligni.</p>
+    </div>
+  </div>
+
+  <div class="conclusion-box box-fade">
+    <h3>Conclusioni</h3>
+    <p>
+      I tumori cerebrali sono una condizione complessa che richiede una diagnosi precoce e un trattamento mirato. La combinazione di chirurgia, radioterapia e chimoterapia è spesso necessaria per affrontare i tumori cerebrali, e la scelta del trattamento dipende dal tipo e dallo stadio del tumore. L'approccio multidisciplinare, che include neurochirurghi, oncologi, radioterapisti e altri specialisti, è fondamentale per ottenere i migliori risultati.
+    </p>
+    <p>La ricerca continua a progredire, portando a nuove opzioni terapeutiche e a una maggiore comprensione dei tumori cerebrali, migliorando la prognosi e la qualità della vita dei pazienti.</p>
+  </div>
+</section>
+
+<!-- Script per animazione al scroll -->
+<script>
+  const fadeBoxes = document.querySelectorAll('.box-fade');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  fadeBoxes.forEach(box => observer.observe(box));
+</script>
+
+<!-- Sezione Torna alla Home -->
+<section class="return-home">
+  <a href="index.html" class="return-home-button">
+    <i class="fas fa-home"></i>Home
+  </a>
+</section>
 
