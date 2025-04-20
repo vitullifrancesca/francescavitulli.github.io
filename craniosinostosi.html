@@ -1,1 +1,168 @@
+<style>
+  .section-craniosinostosi {
+    background: url('craniosinostosi.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    padding: 40px 20px;
+    overflow: hidden;
+  }
+
+  .box-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+  }
+
+  .box-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .intro-box, .conclusion-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #a0d4ff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .conclusion-box {
+    margin-top: 60px;
+  }
+
+  .surgery-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .surgery-box {
+    flex: 1 1 250px;
+    max-width: 430px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d0eaff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .surgery-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .surgery-box h3 {
+    color: #007acc;
+    margin-bottom: 10px;
+  }
+
+  .surgery-box p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .intro-box h2,
+  .conclusion-box h3 {
+    text-align: center;
+    color: #004080;
+  }
+
+  .intro-box p,
+  .conclusion-box p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .return-home {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .return-home-button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .return-home-button:hover {
+    background-color: #005f8d;
+  }
+
+  .return-home-button i {
+    margin-right: 10px;
+  }
+</style>
+
+<!-- Sezione Craniosinostosi -->
+<section id="craniosinostosi" class="section-craniosinostosi">
+  <div class="intro-box box-fade">
+    <h2>Craniosinostosi</h2>
+    <p>
+      La craniosinostosi è una condizione congenita in cui una o più delle suture craniche del bambino si chiudono prematuramente, impedendo una crescita normale del cranio e del cervello. Le suture craniche sono le linee di giunzione tra le ossa del cranio, che normalmente si uniscono dopo la nascita, consentendo la crescita del cervello. Quando una di queste suture si chiude troppo presto, può influire sulla forma e sullo sviluppo del cranio e del cervello.
+    </p>
+    <p>Esistono diversi tipi di craniosinostosi, tra cui:</p>
+    <ul>
+      <li><strong>Craniosinostosi scafocefalia</strong>: chiusura prematura della sutura sagittale, che provoca un cranio lungo e stretto.</li>
+      <li><strong>Craniosinostosi brachicefalia</strong>: chiusura prematura della sutura coronale, che provoca un cranio largo e appiattito.</li>
+      <li><strong>Craniosinostosi trigonacefalia</strong>: chiusura prematura della sutura metopica, che provoca un cranio a forma di triangolo.</li>
+    </ul>
+    <p>Questa condizione può essere associata a disabilità cognitive, ma non sempre. In molti casi, un trattamento tempestivo può prevenire complicazioni. La causa esatta della craniosinostosi non è sempre chiara, ma può essere dovuta a fattori genetici o ambientali.</p>
+  </div>
+
+  <div class="surgery-boxes box-fade">
+    <div class="surgery-box">
+      <h3>Chirurgia Open</h3>
+      <p>La chirurgia tradizionale per la craniosinostosi implica un intervento che consente di rimuovere la parte delle ossa del cranio che si è fusa troppo presto. Questo permette di ridare forma al cranio e lasciare spazio per la crescita cerebrale. Questo trattamento è solitamente eseguito quando il bambino è molto giovane, di solito prima dei 6 mesi, per ottenere i migliori risultati.</p>
+    </div>
+
+    <div class="surgery-box">
+      <h3>Chirurgia Minimante Invasiva</h3>
+      <p>Un'opzione più recente è la chirurgia minimamente invasiva, che prevede piccole incisioni e l'uso di tecniche endoscopiche per separare le ossa craniche fuse. Questa opzione può comportare tempi di recupero più rapidi e minori complicazioni post-operatorie, ma non è adatta a tutti i casi di craniosinostosi.</p>
+    </div>
+
+  </div>
+
+  <div class="conclusion-box box-fade">
+    <h3>Conclusioni</h3>
+    <p>
+      La craniosinostosi è una condizione che richiede una diagnosi e un trattamento tempestivi per prevenire danni permanenti al cervello e al cranio. La chirurgia, che è il trattamento principale per la craniosinostosi, può migliorare significativamente la qualità della vita del bambino e ridurre il rischio di complicazioni neurologiche. Ogni caso è unico, e la scelta del trattamento dipenderà dal tipo di craniosinostosi, dall'età del bambino e dalla salute generale.
+    </p>
+    <p>Se sospetti che il tuo bambino possa avere una craniosinostosi, è fondamentale consultare un neurochirurgo pediatrico per una valutazione approfondita e un piano di trattamento personalizzato.</p>
+  </div>
+</section>
+
+<!-- Script per animazione al scroll -->
+<script>
+  const fadeBoxes = document.querySelectorAll('.box-fade');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  fadeBoxes.forEach(box => observer.observe(box));
+</script>
+
+<!-- Sezione Torna alla Home -->
+<section class="return-home">
+  <a href="index.html" class="return-home-button">
+    <i class="fas fa-home"></i>Home
+  </a>
+</section>
 
